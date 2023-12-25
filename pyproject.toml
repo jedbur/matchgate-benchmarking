@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mgbenchmark"
+requires-python = ">=3.11"
+version = "0.0.1"
+authors = [{name = "Jedrzej Burkat", email = "jbb55@cam.ac.uk" }]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.ruff]
+# Enable flake8-bugbear (`B`) rules, pandas, see https://beta.ruff.rs/docs/rules/
+select = ["E", "F", "B", "RUF","PT","UP", "C4", "D"]
+ignore = ["RUF002"]
+extend-exclude = ["**/*.ipynb", ".venv/**", "docs/**"]
+target-version = "py311"
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/conftest.py" = ["D103"]
+
+[tool.ruff.pydocstyle]
+# Use Google-style docstrings.
+convention = "google"
+
+#https://microsoft.github.io/pyright/#/getting-started
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["mgbenchmark","tests"]
+ignore = ["**/*.ipynb", ".venv/**", "docs/**"]
+pythonVersion = "3.11"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+#pytest-parallel options
+addopps = ["--workers auto", "--tests-per-worker auto"]
