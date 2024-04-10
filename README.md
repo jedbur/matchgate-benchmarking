@@ -1,6 +1,6 @@
 # matchgate-benchmarking
 
-This is code for matchgate fidelity estimation, using Python 3.11 and qiskit. It implements the algorithm described in our upcoming paper. We recommend using a virtual environment to install the project, however the code can be directly copied from the `mgbenchmark` folder.
+This is supplementary code to our paper "A Lightweight Protocol for Matchgate Fidelity Estimation". It implements the algorithm described in the text, using Python 3.11 and qiskit. We recommend using a virtual environment to install the project, however the code can be directly copied from the `mgbenchmark` folder.
 
 ## Project Structure
 
