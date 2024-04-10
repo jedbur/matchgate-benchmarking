@@ -83,7 +83,7 @@ def mg_so_to_superoperator(r: NDArray[np.complex128]) -> NDArray[np.complex128]:
         msg = "R must be even dimensional."
         raise ValueError(msg)
 
-    if (r @ r.T != np.eye(r.shape[0])).all():
+    if (r @ r.T - np.eye(r.shape[0]) > 10 ** (-10)).all():
         msg = "R must be orthogonal."
         raise ValueError(msg)
 
