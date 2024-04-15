@@ -2,6 +2,9 @@ pyright
 black
 sphinx
 qiskit
+pytket
+pytket-qiskit
+pytket-qulacs
 pre-commit
 wheel
 pytest
