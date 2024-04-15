@@ -20,7 +20,7 @@ The project uses toml for configuration instead of setup.py. The configuration f
 To install the project, clone the repository and run (on some systems you may need to use `python3` instead of `python`):
 
 ```sh
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -U pip setuptools
 pip install -r requirements.txt
